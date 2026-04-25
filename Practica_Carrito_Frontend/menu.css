@@ -1,0 +1,100 @@
+body{
+    background-color: rgb(234, 189, 217);
+    margin: 30px;
+    margin-right: 45px;  /* margen derecho */
+    align-items: center;
+}
+
+h1 {
+    font-size: 30px;
+    color: rgb(243, 92, 183);
+    font-family: 'Fredoka', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    background-color: #f4d7e9;
+    padding: 10px;             /* espacio interno */
+    border-radius: 8px;        /* bordes redondeados */
+    border-color: rgb(226, 43, 156);
+}
+
+p {
+    font-family: 'Fredoka', sans-serif;
+    font-weight: lighter;
+}
+
+.destacado {
+  font-size: 22px;
+  font-weight: bold;
+  color: #c44585;
+}
+
+h3{
+    border: 3px solid #ec66b4;
+    border-radius: 8px;
+    text-align: center;
+    
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "lista imagen";
+    padding: 12px;
+    align-items: center;
+    border: 3px solid #f4e7ee;
+    background-color: rgba(244, 215, 233, 0.7);
+    gap: 20px;  /* espacio entre columnas */
+}
+
+.img{
+    grid-area: imagen;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
+}
+.listar_opciones{
+    grid-area: lista;
+    list-style: none;
+    text-align: center;
+    padding-left: 0; /* quitar sangría */
+    margin: 0;
+}
+
+
+.boton{
+    display: inline-block; 
+    padding: 10px 20px;
+    background-color: rgb(235, 111, 185);;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.boton:hover {
+  background-color: #c44585;
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.contenedor-flex{
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.contenedor-flex video {
+width: 300px; /* ancho fijo más pequeño que el original */
+  height: auto; /* mantiene la proporción */
+  flex-shrink: 0; /* no se encoge más allá de 300px */
+}
+
+.radio{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;       /* ocupa todo el ancho disponible */
+    /*height: 100vh;*/
+}

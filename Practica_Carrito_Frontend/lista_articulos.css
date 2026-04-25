@@ -1,0 +1,41 @@
+/*Para la lista de artículos*/
+.boton{
+    display: inline-block; 
+    padding: 10px 20px;
+    background-color: rgb(235, 111, 185);;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.producto{
+    border: 1px solid #d34c9b;
+    padding: 10px 80px; /*distancia entre el contenido y su borde*/
+    margin: 10px;
+    display: flex; /*Elementos se colocan en lína horizontal*/
+    justify-content: space-between; /*Dejo espacio entre los elementos (texto e imagen)*/
+    align-items: center;
+}
+
+.texto-producto {
+  flex: 1; /*Que ocupe todo el espacio posible*/
+  font-family: 'Fredoka', sans-serif;
+}
+
+.item-title{
+    font-size: 25px;
+}
+
+.imagen-producto img {
+    width: 150px;
+    height: auto;
+}
+
+.control {
+  margin-top: 10px;
+}
+
+.control input {
+  width: 50px;
+  margin-right: 10px;
+}

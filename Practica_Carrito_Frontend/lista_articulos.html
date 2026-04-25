@@ -1,0 +1,286 @@
+<!-- PÁGINA WEB ESTÁTICA (Lista artículos) -->
+
+<!DOCTYPE html>
+
+<html lang="es">
+  <head> <!-- Lo que se cargará al abrir la página -->
+    <title>lista de artículos</title> <!-- Titulo visible en la pestaña del navegador -->
+    <meta charset = "utf-8">
+    <meta name = "viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="menu.css"> 
+    <link rel="stylesheet" href="lista_articulos.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">   
+    <script src="index.js"></script>
+   </head>
+  <body>
+    <h1> ~ Artículos que ofrecemos en la tienda ~ </h1>
+    <!-- Aquello que queremos mostrar: -->
+
+    <p>¿Qué disco estás buscando? ¡Aquí lo tenemos!</p>
+
+    <!-- Añadir artículos: -->
+     <article class = "producto">
+      <div class = "texto-producto">
+         <div class = "item-title">Zayn - Icarus Falls</div>
+         <div class = "item-description"> En este CD podrás encontrar canciones como "There You Are", "Common" o "Entertainer".</div>
+         <div class = "control">
+           <!-- Poner botón de añadir al carro y número de artículos: -->
+           <input id="txt_1" type="number" class = "cantidad-producto" value = "1" min="1" max = "10"> 
+           <button id="1" onclick="EnviarArticulo(this)" class = "boton"> 
+           Añadir a carrito
+           </button>
+          <label id="lbl_1">19.99</label> 
+        </div>   
+      </div>
+      <div class = "imagen-producto">
+         <img src="cd_zayn.jpg" alt="No se pudo cargar la imagen">      
+      </div>
+     </article> 
+
+
+     <article class = "producto">
+      <div class = "texto-producto">
+         <div class = "item-title">Sza - SOS</div>
+         <div class = "item-description"> En este CD podrás encontrar canciones como "Kill Bill", "Snooze" o "Nobody Gets Me".</div>
+         <div class = "control">
+           <!-- Poner botón de añadir al carro y número de artículos: -->
+           <input id="txt_2" type="number" class = "cantidad-producto" value = "1" min="1" max = "10"> 
+           <button id="2" onclick="EnviarArticulo(this)" class = "boton"> 
+           Añadir a carrito
+           </button>
+           <label id="lbl_2">19.99</label>  
+        </div>   
+      </div>
+      <div class = "imagen-producto">
+         <img src="cd_sza.jpg" alt="No se pudo cargar la imagen">      
+      </div>
+     </article>
+
+
+     <article class = "producto">
+      <div class = "texto-producto">
+         <div class = "item-title">Damiano David - Funny Little Dreams</div>
+         <div class = "item-description"> En este CD podrás encontrar canciones como "Talk To Me", "Next Summer" o "The First Time".</div>
+         <div class = "control">
+           <!-- Poner botón de añadir al carro y número de artículos: -->
+           <input id="txt_3" type="number" class = "cantidad-producto" value = "1" min="1" max = "10"> 
+           <button id="3" onclick="EnviarArticulo(this)" class = "boton"> Añadir a carrito</button>
+           <label id="lbl_3">19.99</label>
+             
+        </div>   
+      </div>
+      <div class = "imagen-producto">
+         <img src="cd_damiano.png" alt="No se pudo cargar la imagen">      
+      </div>
+     </article>
+
+
+     <article class = "producto">
+      <div class = "texto-producto">
+         <div class = "item-title">Coldplay - Parachutes</div>
+         <div class = "item-description"> En este CD podrás encontrar canciones como "Yellow", "Sparks" o "High Speed".</div>
+         <div class = "control">
+           <!-- Poner botón de añadir al carro y número de artículos: -->
+           <input id="txt_4" type="number" class = "cantidad-producto" value = "1" min="1" max = "10"> 
+           <button id="4" onclick="EnviarArticulo(this)" class = "boton"> 
+           Añadir a carrito
+           </button>
+           <label id="lbl_4">19.99</label>
+        </div>   
+      </div>
+      <div class = "imagen-producto">
+         <img src="cd_coldplay.jpg" alt="No se pudo cargar la imagen">      
+      </div>
+     </article>
+
+     <article class = "producto">
+      <div class = "texto-producto">
+         <div class = "item-title">Rocío Jurado - Esencial</div>
+         <div class = "item-description"> En este CD podrás encontrar canciones como "Como una ola", "Muera el amor" o "Como yo te amo".</div>
+         <div class = "control">
+           <!-- Poner botón de añadir al carro y número de artículos: -->
+           <input id="txt_5" type="number" class = "cantidad-producto" value = "1" min="1" max = "10"> 
+           <button id="5" onclick="EnviarArticulo(this)" class = "boton"
+           > 
+           Añadir a carrito
+           </button>  
+           <label id="lbl_5">19.99</label>
+        </div>   
+      </div>
+      <div class = "imagen-producto">
+         <img src="cd_rocio_jurado.jpg" alt="No se pudo cargar la imagen">      
+      </div>
+     </article>
+
+
+     <article class = "producto">
+      <div class = "texto-producto">
+         <div class = "item-title">Morat - Balas Perdidas</div>
+         <div class = "item-description"> En este CD podrás encontrar canciones como "Punto Y Aparte", "Presiento" o "Acuérdate De Mí".</div>
+         <div class = "control">
+           <!-- Poner botón de añadir al carro y número de artículos: -->
+           <input id="txt_6" type="number" class = "cantidad-producto" value = "1" min="1" max = "10"> 
+           <button id="6" onclick="EnviarArticulo(this)" class = "boton"> 
+           Añadir a carrito
+           </button> 
+           <label id="lbl_6">19.99</label> 
+        </div>   
+      </div>
+      <div class = "imagen-producto">
+         <img src="cd_morat.jpg" alt="No se pudo cargar la imagen">      
+      </div>
+     </article>
+
+     <article class = "producto">
+      <div class = "texto-producto">
+         <div class = "item-title">Pablo Alborán - Terral</div>
+         <div class = "item-description"> En este CD podrás encontrar canciones como "Por fin", "La escalera" o "Recuérdame".</div>
+         <div class = "control">
+           <!-- Poner botón de añadir al carro y número de artículos: -->
+           <input id="txt_7" type="number" class = "cantidad-producto" value = "1" min="1" max = "10"> 
+           <button id="7" onclick="EnviarArticulo(this)" class = "boton"> 
+           Añadir a carrito
+           </button>
+           <label id="lbl_7">19.99</label>  
+        </div>   
+      </div>
+      <div class = "imagen-producto">
+         <img src="cd_pablo_alboran.jpg" alt="No se pudo cargar la imagen">      
+      </div>
+     </article>
+
+     <article class = "producto">
+      <div class = "texto-producto">
+         <div class = "item-title">The Beatles - Abbey Road</div>
+         <div class = "item-description"> En este CD podrás encontrar canciones como "Here Comes the Sun", "Come Together" o "Oh! Darling".</div>
+         <div class = "control">
+           <!-- Poner botón de añadir al carro y número de artículos: -->
+           <input id="txt_8" type="number" class = "cantidad-producto" value = "1" min="1" max = "10"> 
+           <button id="8" onclick="EnviarArticulo(this)" class = "boton"> 
+           Añadir a carrito
+           </button>  
+           <label id="lbl_8">19.99</label>
+        </div>   
+      </div>
+      <div class = "imagen-producto">
+         <img src="cd_beatles.jpg" alt="No se pudo cargar la imagen">      
+      </div>
+     </article>
+
+     <article class = "producto">
+      <div class = "texto-producto">
+         <div class = "item-title">RADWIMPS - Your Name</div>
+         <div class = "item-description">En este CD podrás encontrar canciones como "Sparkle", "Nandemonaiya" o "Zenzenzense"</div>
+         <div class = "control">
+           <!-- Poner botón de añadir al carro y número de artículos: -->
+           <input id="txt_9" type="number" class = "cantidad-producto" value = "1" min="1" max = "10"> 
+           <button id="9" onclick="EnviarArticulo(this)" class = "boton"> 
+           Añadir a carrito
+           </button> 
+           <label id="lbl_9">19.99</label> 
+        </div>   
+      </div>
+      <div class = "imagen-producto">
+         <img src="cd_randwimps.jpg" alt="No se pudo cargar la imagen">      
+      </div>
+     </article>
+
+     <article class = "producto">
+      <div class = "texto-producto">
+         <div class = "item-title">One Direction - FOUR</div>
+         <div class = "item-description">En este CD podrás encontrar canciones como "Steal My Girl", "Night Changes" o "Spaces"</div>
+         <div class = "control">
+           <!-- Poner botón de añadir al carro y número de artículos: -->
+           <input id="txt_10" type="number" class = "cantidad-producto" value = "1" min="1" max = "10"> 
+           <button id="10" onclick="EnviarArticulo(this)" class = "boton"> 
+           Añadir a carrito
+           </button>
+           <label id="lbl_10">19.99</label>  
+        </div>   
+      </div>
+      <div class = "imagen-producto">
+         <img src="cd_1D.jpg" alt="No se pudo cargar la imagen">      
+      </div>
+     </article>
+
+     <article class = "producto">
+      <div class = "texto-producto">
+         <div class = "item-title">Craig David - The Story Goes ...</div>
+         <div class = "item-description">En este CD podrás encontrar canciones como "Johnny", "Do You Believe In Love" o "Let Her Go"</div>
+         <div class = "control">
+           <!-- Poner botón de añadir al carro y número de artículos: -->
+           <input id="txt_11" type="number" class = "cantidad-producto" value = "1" min="1" max = "10"> 
+           <button id="11" onclick="EnviarArticulo(this)" class = "boton"> 
+           Añadir a carrito
+           </button>
+           <label id="lbl_11">19.99</label>  
+        </div>   
+      </div>
+      <div class = "imagen-producto">
+         <img src="cd_graig_david.jpg" alt="No se pudo cargar la imagen">      
+      </div>
+     </article>
+
+     <article class = "producto">
+      <div class = "texto-producto">
+         <div class = "item-title">Pink Sweat$ - Pink Moon</div>
+         <div class = "item-description">En este CD podrás encontrar canciones como "Nothing Feels Better", "Real Thing" o "Spiritual"</div>
+         <div class = "control">
+           <!-- Poner botón de añadir al carro y número de artículos: -->
+           <input id="txt_12" type="number" class = "cantidad-producto" value = "1" min="1" max = "10"> 
+           <button id="12" onclick="EnviarArticulo(this)" class = "boton"> 
+           Añadir a carrito
+           </button>
+           <label id="lbl_12">19.99</label>  
+        </div>   
+      </div>
+      <div class = "imagen-producto">
+         <img src="cd_pink_sweats.png" alt="No se pudo cargar la imagen">      
+      </div>
+     </article>
+
+     <article class = "producto">
+      <div class = "texto-producto">
+         <div class = "item-title">Mecano - Descanso Dominical</div>
+         <div class = "item-description">En este CD podrás encontrar canciones como "Laika", "Quédate En Madrid" o "Mujer Contra Mujer"</div>
+         <div class = "control">
+           <!-- Poner botón de añadir al carro y número de artículos: -->
+           <input id="txt_13" type="number" class = "cantidad-producto" value = "1" min="1" max = "10"> 
+           <button id="13" onclick="EnviarArticulo(this)" class = "boton"> 
+           Añadir a carrito
+           </button>
+           <label id="lbl_13">19.99</label>  
+        </div>   
+      </div>
+      <div class = "imagen-producto">
+         <img src="cd_mecano.jpg" alt="No se pudo cargar la imagen">      
+      </div>
+     </article>
+
+     <article class = "producto">
+      <div class = "texto-producto">
+         <div class = "item-title">SEVENTEEN - Sector 17</div>
+         <div class = "item-description">En este CD podrás encontrar canciones como "Circles", "DON QUIXOTE" o "IF you leave me"</div>
+         <div class = "control">
+           <!-- Poner botón de añadir al carro y número de artículos: -->
+           <input id="txt_14" type="number" class = "cantidad-producto" value = "1" min="1" max = "10"> 
+           <button id="14" onclick="EnviarArticulo(this)" class = "boton"> 
+           Añadir a carrito
+           </button>
+           <label id="lbl_14">19.99</label>  
+        </div>   
+      </div>
+      <div class = "imagen-producto">
+         <img src="cd_seventeen.jpg" alt="No se pudo cargar la imagen">      
+      </div>
+     </article>
+
+   <section>
+      <h2>Respuesta / mensajes</h2>
+      <label id="salida" class="salida">Aquí se mostrará la respuesta JSON o el mensaje de error.</label>
+   </section>
+    
+  </body>
+</html>
+
+<script>inicializarCarrito();</script>

@@ -1,0 +1,36 @@
+table{
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    font-family: 'Fredoka', sans-serif;
+}
+
+table th, table td{
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+table thead{
+    background-color: #f4d7e9;
+}
+table tfoot{
+    background-color: #f4d7e9;
+    border-top: 2px solid #68033e;
+    padding-top: 100px;
+    text-align: left;
+    
+}
+
+/* Imagen ajustada a la tabla */
+.img {
+  width: 80px;       /* tamaño fijo */
+  height: 80px;
+  object-fit: cover; /* recorta sin deformar */
+  border-radius: 5px;
+}
+
+.producto {
+  display: flex;
+  align-items: center; /*Centrado verticalmente*/
+  gap: 10px;
+}

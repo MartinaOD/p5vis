@@ -1,0 +1,12 @@
+.form-example{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    font-family: 'Fredoka', sans-serif;
+}
+
+.gif_bugs{
+    width: 80%;
+    height: auto;
+}

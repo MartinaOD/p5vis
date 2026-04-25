@@ -1,0 +1,95 @@
+<!-- PÁGINA WEB ESTÁTICA (Menú principal) -->
+
+<!DOCTYPE html>
+
+<html lang="es">
+  <head> <!-- Lo que se cargará al abrir la página -->
+    <title>PÁGINA PRINCIPAL DE CARRITOS</title> <!-- Titulo visible en la pestaña del navegador -->
+    <meta charset = "utf-8">
+    <meta name = "viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="menu.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">   
+  </head>
+  <body>
+    
+    <h1> ~~~ MENÚ DE TU CARRITO ~~~ </h1>
+    <!-- Aquello que queremos mostrar: -->
+
+    <h3>
+    <p> Bienvenido a nuestra página web.
+        Aquí podrás comprar CDs de todo tipo de música <i>(o eso se intentará)</i>.<br>
+        ¡Ven a descubrir con nosotros qué tenemos por ofrecer!
+    </p>
+    </h3>
+
+    <section class = "grid">
+
+    <!-- Añadir botones para acceder a cada una de las páginas: --> 
+     <ul class = "listar_opciones"> 
+      <li> 
+        <p>Pulse aquí para ver nuestros artículos:</p> 
+        <a href="lista_articulos.html" class="boton">Ver artículos</a>
+      </li>
+      <li> 
+        <p>Pulse aquí para ver cesta de compra:</p> 
+        <a href="lista_carrito.html" class="boton">Ver Cesta</a>
+      </li>
+     </ul>
+
+     <!-- Añadir video/imagen: -->
+    <p>
+      <img class = "img" src="snoopy-dance.gif" alt="No se pudo cargar el GIF">
+    </p>
+
+    </section>
+
+
+    <p class="destacado"> <u>Y se preguntará, ¿Por qué comprar CDs en la era de Spotify?</u></p>
+    <p>
+      Pues bien, aunque pueda sonar "retro", el escuchar música en CD nos permite una experiencia más tangible y completa,
+      donde brindamos un apoyo directo a nuestros artistas favoritos, sin depender de internet o de la app de turno, logrando a su vez
+      una mayor calidad de sonido y conexión emocional.    
+      <br><br>
+      Al fin y al cabo, los vinilos han vuelto de moda, ¿Quién dice que lo siguiente no serán los clásicos CD?
+    </p>
+
+    <p class="destacado"> <u>¿Por qué una tienda de música?</u></p>
+    <div class="contenedor-flex">
+
+    <video width="640" height="360" controls>
+      <source src="the-dance-animations-by-ryan-woodward-and-glen-keane-music-by-georg-wagner-ytmp4.savetube.vip.mp4" type="video/mp4">
+      Tu navegador no soporta el video.
+    </video>
+    
+    <p>
+      La música está presente en tantísimos momentos de nuestra vida, que muchas veces el simple hecho de escuchar
+      una melodía ya nos lleva directamente a ese recuerdo o esa sensación pasada que nos marcó de una u otra forma.
+      Se usa tanto para transmitir/ contar una historia como para sentir emociones.
+      <br><br>
+      Ya sea acompañada de voz o instrumental únicamente, es usada en todo lo audiovisual referente al arte (la danza, la pintura, etc).
+      <br>De hecho, les queremos dejar un ejemplo de cómo la música puede lograr transmitir una historia a través de una animación: 
+    </p>
+
+    </div>
+
+    <p class="destacado"> <u>¿Qué otras alternativas tengo para escuchar música?</u></p>
+
+    <p>
+      Si no le convence el hecho de comprar discos, nos gustaría ayudarle igualmente a poder escuchar música (aunque no sea con nosotros 😔).
+      <br>No solo a través de plataformas como Youtube, Spotify o Apple Music, también se puede descubrir gran cantidad de música a través de la radio.
+      En España, contamos con numerosas emisoras las cuales les pueden interesar. <br>A continuación, adjuntamos una serie de enlaces a algunas de las más sonadas en España:
+
+    </p>
+
+    <div class = "radio">
+      <iframe src = "https://los40.com/"></iframe> 
+      <iframe src = "https://www.cadena100.es/"></iframe>
+      <iframe src = "https://www.rockfm.fm/"></iframe>
+      <iframe src = "https://www.europafm.com/"></iframe>
+    </div>
+    
+
+    
+
+  </body>
+</html>

@@ -1,0 +1,106 @@
+<!-- PÁGINA WEB ESTÁTICA (formulario de pago) -->
+
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <title>pago de compra</title> <!-- Titulo visible en la pestaña del navegador -->
+    <meta charset = "utf-8">
+    <meta name = "viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="menu.css"> 
+    <link rel="stylesheet" href="pago.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">   
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <h1> ~~~ PAGO DE LA COMPRA ~~~ </h1>
+
+    <h3> 
+        <p>El precio total de su carro asciende a 100€, rellene el siguiente formulario para efectuar el pago y completar 
+            la compra de los artículos seleccionados:
+        </p>
+    </h3>
+
+    <section class = "grid">
+
+    <form id = "formPago" action="" method="get" class="form-example">
+        <fieldset>
+        <div class="form-example">
+            <label for="name">Nombre: </label>
+            <input type="text" name="name" id="name" required />
+        </div>
+        <div class="form-example">
+            <label for="apellidos">Apellidos: </label>
+            <input type="text" name="apellidos" id="apellidos" required />
+        </div>
+        <div class="form-example">
+            <label for="pais">País: </label>
+            <select name="paises" id="pais-select">
+                <option value="">--Elija el país--</option>
+                <option value="españa">España</option>
+                <option value="portugal">Portugal</option>
+                <option value="francia">Francia</option>
+                <option value="alemania">Alemania</option>
+                <option value="suecia">Suecia</option>
+                <option value="belgica">Bélgica</option>
+                <option value="suiza">Suiza</option>
+                <option value="dinamarca">Dinamarca</option>
+                <option value="otro">otro</option>
+
+            </select>
+        </div>
+        <div class="form-example">
+            <label for="direccion">Dirección: </label>
+            <input type="text" name="direccion" id="direccion" required />
+        </div>
+        <div class="form-example">
+            <label for="codigo_postal">Código Postal: </label>
+            <input type="text" name="codigo_postal" id="codigo_postal" required />
+        </div>
+        <div class="form-example">
+            <label for="telefono">Teléfono: </label>
+            <input type="text" name="telefono" id="telefono" required />
+        </div>
+        
+        <div class="form-example">
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email" required />
+        </div>
+        </fieldset>
+        <div class="form-example">
+            <fieldset>
+            <label for="pago">Método de pago: </label><br>
+            <label><input type="radio" name="radio" value="tarjeta" /> Visa, MasterCard, Maestro</label><br>
+            <label><input type="radio" name="radio" value="transferencia" /> Bizum</label><br>
+            <label><input type="radio" name="radio" value="movil" /> PayPal, Apple/Google Pay</label><br>
+            </fieldset>
+            </select>
+        </div>
+        
+        <div class="form-example">
+            <input class = "boton" onclick="pagar()" type="button" value="Realizar pago" />
+        </div>
+        
+        <div id="mensajePago" style="display:none; color: rgb(192, 9, 119); font-weight: bold;">
+        <br>
+            ✔ Pago realizado
+        <br>
+        </div>
+
+    </form>
+    
+    <p>
+      <img class = "gif_bugs" src="counting-my-money.gif" alt="No se pudo cargar el GIF">
+    </p>
+
+    </section>
+
+    <h3> 
+        <p>
+            ¡Gracias por comprar con nosotros!
+        </p>
+    </h3>
+    
+    
+  </body>
+</html>

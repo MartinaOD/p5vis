@@ -1,0 +1,61 @@
+<!-- PÁGINA WEB ESTÁTICA (articulos en carrito) -->
+
+
+<!DOCTYPE html>
+
+<html lang="es">
+  <head> <!-- Lo que se cargará al abrir la página -->
+    <title>lista de artículos</title> <!-- Titulo visible en la pestaña del navegador -->
+    <meta charset = "utf-8">
+    <meta name = "viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="menu.css"> 
+    <link rel="stylesheet" href="lista_carrito.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">   
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <h1> ~ Artículos en tu carrito ~ </h1>
+
+    <h3> 
+        <p>
+          Aquí podrás llevar un seguimiento de qué CDs has comprado y a cuánto asciende el precio total de tu carrito.
+          Cuando consideres la compra finalizada, asegúrate de hacer click en el botón 'PAGAR AHORA' para finalizar tu proceso de compra.
+        </p>
+    </h3>
+
+    <!-- Tabla con el producto, la cantidad y el precio unidad/total-->
+
+    <table>
+      <thead>
+        <tr>
+          <th scope="col"><b>PRODUCTO</b></p></th>
+          <th scope="col"><p><b>UNIDADES</b></p></th>
+          <th scope="col"><p><b>PRECIO/ UNIDAD</b></p></th>
+          <th scope="col"><p><b>PRECIO TOTAL</b></p></th>
+        </tr>
+
+      </thead>
+      <tbody id = "cesta_compra_dinamica">
+        
+      </tbody>
+      
+    <tfoot>
+      <tr>
+        <th scope="row" colspan="2">Precio Total de Compra</th>
+        <td>110.4 €</td>
+      </tr>
+  </tfoot>
+</table>
+
+<script>mostrarCesta();</script>
+
+<br>
+<a href="pago.html" class="boton">PAGAR AHORA</a>
+
+    
+  <section>
+      <h2>Respuesta / mensajes</h2>
+      <label id="salida" class="salida">Aquí se mostrará la respuesta JSON o el mensaje de error.</label>
+   </section>
+  </body>
+</html>
