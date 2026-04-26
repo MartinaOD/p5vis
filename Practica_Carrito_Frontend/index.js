@@ -6,6 +6,23 @@ const salida = document.getElementById("salida");
 const tablaCesta = document.getElementById("cesta_compra_dinamica");
 
 const baseUrl = "http://localhost:8080";
+
+const productos = {
+    1: { nombre: "Zayn - Icarus Falls", imagen: "cd_zayn.jpg" },
+    2: { nombre: "Sza - SOS", imagen: "cd_sza.jpg" },
+    3: { nombre: "Damiano David", imagen: "cd_damiano.png" },
+    4: { nombre: "Coldplay - Parachutes", imagen: "cd_coldplay.jpg" },
+    5: { nombre: "Rocío Jurado", imagen: "cd_rocio_jurado.jpg" },
+    6: { nombre: "Morat", imagen: "cd_morat.jpg" },
+    7: { nombre: "Pablo Alborán", imagen: "cd_pablo_alboran.jpg" },
+    8: { nombre: "The Beatles", imagen: "cd_beatles.jpg" },
+    9: { nombre: "RADWIMPS", imagen: "cd_randwimps.jpg" },
+    10: { nombre: "One Direction", imagen: "cd_1D.jpg" },
+    11: { nombre: "Craig David", imagen: "cd_graig_david.jpg" },
+    12: { nombre: "Pink Sweat$", imagen: "cd_pink_sweats.png" },
+    13: { nombre: "Mecano", imagen: "cd_mecano.jpg" },
+    14: { nombre: "SEVENTEEN", imagen: "cd_seventeen.jpg" }
+};
     
 
 /*
@@ -68,7 +85,7 @@ async function inicializarCarrito(){
     try{
         // Intentamos crear el Carrito
         let url = baseUrl + "/api/carrito";
-        alert(url);
+        //alert(url);
 
         // Llamo a la API:
         const response = await fetch(url, {
@@ -132,16 +149,14 @@ async function crearLinea(productoId, precioUnitario, cantidad){
         // Response poseerá la respuesta HTTP
         const datos_linea = await procesarRespuesta(response); // Espero la respuesta
         mostrarSalida(datos_linea);
+
+        await mostrarCesta();
+        await mostrarTotalCesta();
+
     } catch (error) {
         mostrarError(error);
     }
 }
-
-
-/*
-Actualizar el carrito -> añadir producto
-Borrar línea carrito -> borrar toda la cesta
-*/
 
 
 function EnviarArticulo(boton){
@@ -154,7 +169,7 @@ function EnviarArticulo(boton){
     let precioId = "lbl_" + productoId;
     var etiquetaPrecio = document.getElementById(precioId);
     //alert('Cantidad: ' + caja.value);
-    alert('Precio: ' + etiquetaPrecio.textContent);
+    //alert('Precio: ' + etiquetaPrecio.textContent);
 
     crearLinea(productoId, Number(etiquetaPrecio.textContent), cantidad);  
       
@@ -184,10 +199,12 @@ async function mostrarCesta() {
             lineas.forEach(linea => {
                 const fila = document.createElement("tr");
                 fila.innerHTML = `
-                    <td>${linea.idArticulo}</td>
+                    <td>
+                    <img src="${productos[linea.idArticulo].imagen}" width="60">
+                    </td>
                     <td>${linea.numUnidades}</td>
-                    <td>${linea.precioUnitario ?? ""} €</td>
-                    <td>${linea.costeLinea ?? ""} €</td>
+                    <td>${(linea.precioUnitario).toFixed(2) ?? ""} €</td>
+                    <td>${(linea.costeLinea).toFixed(2) ?? ""} €</td>
                     <td>
                         <button onclick="borrarLinea(${linea.id})">
                             ❌
@@ -202,10 +219,38 @@ async function mostrarCesta() {
     }
 }
 
+async function mostrarTotalCesta(){
+    try {
+        const idCarrito = localStorage.getItem("idCarrito");
 
+        if (!idCarrito) {
+            throw new Error("No existe carrito activo");
+        }
+
+        let url = baseUrl + "/api/carrito/" + idCarrito;
+
+        const response = await fetch(url,
+            { method: "GET" }
+        );
+
+        const carrito = await procesarRespuesta(response);
+        
+        const totalElemento = document.getElementById("totalCesta");
+        if (totalElemento) {
+            const total = Math.max(0, carrito.precioTotal);
+            totalElemento.textContent = total.toFixed(2) + " €";
+        }
+
+        return (carrito.precioTotal).toFixed(2);
+
+
+    } catch (error){
+        mostrarError(error);
+    }
+
+}
 
 // Borrar producto:
-
 async function borrarLinea(lineaId) {
     try {
         if (!lineaId) {
@@ -220,6 +265,7 @@ async function borrarLinea(lineaId) {
 
         const respuesta_nula = await procesarRespuesta(response);
         await mostrarCesta(); // Refrescar la tabla, volvemos a pintarla
+        await mostrarTotalCesta();
         mostrarSalida(respuesta_nula);
 
     } catch (error) {
@@ -228,7 +274,6 @@ async function borrarLinea(lineaId) {
 }
 
 // Envio mensaje al pagar
-
 function pagar() {
     const mensaje = document.getElementById("mensajePago");
     mensaje.style.display = "block";
