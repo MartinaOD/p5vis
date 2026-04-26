@@ -39,3 +39,10 @@
   width: 50px;
   margin-right: 10px;
 }
+
+label {
+  background-color: rgb(255, 255, 255);;
+  color: rgb(23, 13, 21);
+  border-radius: 5px;
+  padding: 8px;
+}
