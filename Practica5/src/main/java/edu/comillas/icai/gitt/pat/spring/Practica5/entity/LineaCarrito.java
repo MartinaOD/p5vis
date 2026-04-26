@@ -17,7 +17,7 @@ public class LineaCarrito {
     @ManyToOne(optional = false) private Carrito idCarrito;
 
     @Column private Long idArticulo;
-    @Column private Long precioUnitario;
+    @Column private double precioUnitario;
     @Column private int numUnidades;
     @Column private double costeLinea;
 
