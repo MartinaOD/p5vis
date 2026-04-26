@@ -42,20 +42,20 @@
     <tfoot>
       <tr>
         <th scope="row" colspan="2">Precio Total de Compra</th>
-        <td>110.4 €</td>
+        <td id = "totalCesta">0</td>
       </tr>
   </tfoot>
 </table>
 
-<script>mostrarCesta();</script>
+<script>
+mostrarCesta();
+mostrarTotalCesta();
+</script>
 
 <br>
 <a href="pago.html" class="boton">PAGAR AHORA</a>
 
     
-  <section>
-      <h2>Respuesta / mensajes</h2>
-      <label id="salida" class="salida">Aquí se mostrará la respuesta JSON o el mensaje de error.</label>
-   </section>
+  <section id="salida"></section>
   </body>
 </html>
